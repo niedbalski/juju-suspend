@@ -27,13 +27,10 @@ class Environment:
         self._env.login(self.password)
         self.options = options
 
-    @property
-    def provider(self):
-        if not hasattr(self, '_provider'):
-            klass = "{0}Provider".format(
-                self.bootstrap_config.get('type').capitalize())
-            self._provider = getattr(providers, klass)(self)
-        return self._provider
+        klass = "{0}Provider".format(
+            self.bootstrap_config.get('type').capitalize())
+
+        self.provider = getattr(providers, klass)(self)
 
     @property
     def status(self):
