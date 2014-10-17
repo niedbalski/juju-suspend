@@ -3,6 +3,7 @@ from juju_suspend.providers.base import Provider
 
 class OpenstackProvider(Provider):
 
+    use_sudo = False
     suspend_cmd = "nova suspend {0}"
     resume_cmd = "nova resume {0}"
 

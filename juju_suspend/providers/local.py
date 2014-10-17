@@ -5,6 +5,7 @@ class LocalProvider(Provider):
 
     suspend_cmd = "lxc-stop --name {0}"
     resume_cmd = "lxc-start -d --name {0} --quiet"
+    use_sudo = True
 
     def __init__(self, environment):
         Provider.__init__(self, environment)

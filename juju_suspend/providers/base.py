@@ -3,11 +3,15 @@ import subprocess
 
 class Provider(object):
 
+    use_sudo = False
+
     def __init__(self, environment):
         self.environment = environment
 
     def run(self, command):
-        return subprocess.call("sudo " + command, shell=True)
+        if self.use_sudo:
+            command = "sudo " + command
+        return subprocess.call(command, shell=True)
 
     def do_suspend(self):
         for machine in self.filter_machines():
