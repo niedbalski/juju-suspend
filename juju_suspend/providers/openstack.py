@@ -15,7 +15,9 @@ class OpenstackProvider(Provider):
     def filter_machines(self):
         for i, v in self.environment.machines:
             instance_id = v['InstanceId']
-            if instance_id not in ('pending', 'localhost', ):
+
+            if instance_id not in ('pending', 'localhost', ) and v['DNSName'] + ':17070' not in self.environment.state_servers:
+                print(self.environment.state_servers)
                 yield instance_id
 
     def suspend(self):
