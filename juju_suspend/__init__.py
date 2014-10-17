@@ -7,7 +7,8 @@ import os
 
 class Environment:
 
-    def __init__(self, name=None):
+    def __init__(self, name=None, **options):
+
         #TODO: move this to the cli
         env_path = os.path.expanduser(
             "~/.juju/environments/%s.jenv" % name)
@@ -24,6 +25,7 @@ class Environment:
 
         self._env = GoEnvironment("wss://{}".format(self.state_servers[0]))
         self._env.login(self.password)
+        self.options = options
 
     @property
     def provider(self):

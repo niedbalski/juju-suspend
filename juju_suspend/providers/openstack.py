@@ -3,11 +3,14 @@ from juju_suspend.providers.base import Provider
 
 class OpenstackProvider(Provider):
 
-    suspend_cmd = "nova suspend {0}"
-    resume_cmd = "nova resume {0}"
+    suspend_cmd = ". {1}; nova stop {0}"
+    resume_cmd = ". {1}; nova start {0}"
 
     def __init__(self, environment):
         Provider.__init__(self, environment)
+
+        if not self.environment.options.get('novarc', None):
+            raise Exception("Please specify your novarc file")
 
     def filter_machines(self):
         for i, v in self.environment.machines:
@@ -16,7 +19,7 @@ class OpenstackProvider(Provider):
                 yield instance_id
 
     def suspend(self):
-        self.do_suspend()
+        self.do_suspend(self.environment.options.get('novarc'))
 
     def resume(self):
-        self.do_resume()
+        self.do_resume(self.environment.options.get('novarc'))
