@@ -17,8 +17,7 @@ class OpenstackProvider(Provider):
             instance_id = v['InstanceId']
 
             if instance_id in ('localhost',) and v['DNSName'] + ':17070' \
-               not in self.environment.state_servers and\
-               v['AgentState'] == 'started':
+               not in self.environment.state_servers:
                 yield instance_id
 
     def suspend(self):
