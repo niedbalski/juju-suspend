@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import subprocess
 
 
@@ -15,6 +17,7 @@ class Provider(object):
 
     def do_suspend(self, *args, **kwargs):
         for machine in self.filter_machines():
+            print("Suspending machine: %s" % machine)
             if callable(self.suspend_cmd):
                 self.suspend_cmd(machine, *args, **kwargs)
             else:
@@ -22,6 +25,7 @@ class Provider(object):
 
     def do_resume(self, *args, **kwargs):
         for machine in self.filter_machines():
+            print("Resuming machine: %s" % machine)
             if callable(self.resume_cmd):
                 self.resume_cmd(machine, *args, **kwargs)
             else:
