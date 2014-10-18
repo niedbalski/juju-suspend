@@ -16,7 +16,7 @@ Providers supported: Local (lxc) and OpenStack (nova) .. interested? please add 
 ubuntu@niedbalski-xxx:~$ pip install juju-suspend
 
 ubuntu@niedbalski-xxx:~$ juju suspend --novarc=~/novarc --suspend
-
+```
 Suspending machine: fd7cbbfb-2a2d-499a-88bb-1fefd2e0adfc
 Suspending machine: e6690b82-18cd-4782-a1dd-f0b4024b2894
 Suspending machine: 1977804a-bb3b-4ef8-9bc4-89d81aaffbfb
@@ -34,7 +34,7 @@ Suspending machine: 86d5d886-18fb-4150-9c52-6fed3a82e6e2
 Suspending machine: 695e36f6-0e48-48bc-9c27-ebe7ef7ff172
 Suspending machine: 5fa67990-39a2-4138-8517-0bd78d41f819
 Suspending machine: 4a2f67a9-cdee-488e-a3cc-240f9d87c971
-
+```
 ubuntu@niedbalski-xxx:~$ nova list
 ```
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
