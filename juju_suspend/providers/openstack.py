@@ -20,7 +20,7 @@ class OpenstackProvider(Provider):
                 yield instance_id
 
     def suspend(self):
-        self.do_suspend(self.environment.options.get('novarc'))
+        self.do_suspend(self.environment.options.novarc)
 
     def resume(self):
-        self.do_resume(self.environment.options.get('novarc'))
+        self.do_resume(self.environment.options.novarc)
