@@ -8,7 +8,7 @@ Juju pluging for suspend and resume a juju environment for avoid wasted resource
 
 On development, still not well tested. 
 
-Providers supported: Local (lxc) and OpenStack (nova) .. interested? please add your own see: [Providers](http://github.com/niedbalski/juju-suspend/juju_suspend/providers)
+Providers supported: Local (lxc) and OpenStack (nova) .. interested? please add your own see: [Providers](https://github.com/niedbalski/juju-suspend/tree/master/juju_suspend/providers)
 
 # How it works
 
