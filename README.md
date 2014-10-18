@@ -2,8 +2,9 @@ Juju suspend/resume
 ===================
 
 
-(env)ubuntu@niedbalski-bastion:~$ juju-suspend --novarc=~/novarc --suspend
-(env)ubuntu@niedbalski-bastion:~$ nova list
+ubuntu@niedbalski-xxx:~$ juju-suspend --novarc=~/novarc --suspend
+ubuntu@niedbalski-xxx:~$ nova list
+```
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
 | ID                                   | Name                       | Status  | Task State | Power State | Networks                                    |
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
@@ -24,10 +25,13 @@ Juju suspend/resume
 | ec9ecfb6-9fab-4895-b1e5-6896ae960e1c | juju-niedbalski-machine-7  | SHUTOFF | -          | Shutdown    | niedbalski_admin_net=10.5.0.15              |
 | 4a2f67a9-cdee-488e-a3cc-240f9d87c971 | juju-niedbalski-machine-8  | SHUTOFF | -          | Shutdown    | niedbalski_admin_net=10.5.0.16              |
 | 695e36f6-0e48-48bc-9c27-ebe7ef7ff172 | juju-niedbalski-machine-9  | SHUTOFF | -          | Shutdown    | niedbalski_admin_net=10.5.0.19              |
-| e9d5b063-1ade-4760-ab2c-0b6f2058e711 | niedbalski-bastion         | ACTIVE  | -          | Running     | niedbalski_admin_net=10.5.0.3, 10.230.18.13 |
+| e9d5b063-1ade-4760-ab2c-0b6f2058e711 | niedbalski-xxx         | ACTIVE  | -          | Running     | niedbalski_admin_net=10.5.0.3, 10.230.18.13 |
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
-(env)ubuntu@niedbalski-bastion:~$ juju-suspend --novarc=~/novarc --resume
-(env)ubuntu@niedbalski-bastion:~$ nova list
+```
+ubuntu@niedbalski-xxx:~$ juju-suspend --novarc=~/novarc --resume
+
+ubuntu@niedbalski-xxx:~$ nova list
+```
 +--------------------------------------+----------------------------+--------+------------+-------------+---------------------------------------------+
 | ID                                   | Name                       | Status | Task State | Power State | Networks                                    |
 +--------------------------------------+----------------------------+--------+------------+-------------+---------------------------------------------+
@@ -48,5 +52,6 @@ Juju suspend/resume
 | ec9ecfb6-9fab-4895-b1e5-6896ae960e1c | juju-niedbalski-machine-7  | ACTIVE | -          | Running     | niedbalski_admin_net=10.5.0.15              |
 | 4a2f67a9-cdee-488e-a3cc-240f9d87c971 | juju-niedbalski-machine-8  | ACTIVE | -          | Running     | niedbalski_admin_net=10.5.0.16              |
 | 695e36f6-0e48-48bc-9c27-ebe7ef7ff172 | juju-niedbalski-machine-9  | ACTIVE | -          | Running     | niedbalski_admin_net=10.5.0.19              |
-| e9d5b063-1ade-4760-ab2c-0b6f2058e711 | niedbalski-bastion         | ACTIVE | -          | Running     | niedbalski_admin_net=10.5.0.3, 10.230.18.13 |
+| e9d5b063-1ade-4760-ab2c-0b6f2058e711 | niedbalski-xxx         | ACTIVE | -          | Running     | niedbalski_admin_net=10.5.0.3, 10.230.18.13 |
 +--------------------------------------+----------------------------+--------+------------+-------------+---------------------------------------------+
+```
