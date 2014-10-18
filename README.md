@@ -4,11 +4,16 @@ Juju suspend/resume
 Juju pluging for suspend and resume a juju environment for avoid wasted resources.
 
 
+# Warning
+
+On development, still not well tested.
+
 # How it works
 
 
-ubuntu@niedbalski-xxx:~$ juju-suspend --novarc=~/novarc --suspend
 
+ubuntu@niedbalski-xxx:~$ pip install juju-suspend
+ubuntu@niedbalski-xxx:~$ juju suspend --novarc=~/novarc --suspend
 ubuntu@niedbalski-xxx:~$ nova list
 ```
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
@@ -34,7 +39,7 @@ ubuntu@niedbalski-xxx:~$ nova list
 | e9d5b063-1ade-4760-ab2c-0b6f2058e711 | niedbalski-xxx         | ACTIVE  | -          | Running     | niedbalski_admin_net=10.5.0.3, 10.230.18.13 |
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
 ```
-ubuntu@niedbalski-xxx:~$ juju-suspend --novarc=~/novarc --resume
+ubuntu@niedbalski-xxx:~$ juju resume --novarc=~/novarc --resume
 
 ubuntu@niedbalski-xxx:~$ nova list
 ```
