@@ -8,7 +8,7 @@ Juju pluging for suspend and resume a juju environment for avoid wasted resource
 
 On development, still not well tested. 
 
-Providers supported: Local (lxc) and OpenStack (nova) .. interested? please add your own to: juju_suspend/providers/
+Providers supported: Local (lxc) and OpenStack (nova) .. interested? please add your own see: [Providers](http://github.com/niedbalski/juju-suspend/juju_suspend/providers)
 
 # How it works
 
@@ -61,7 +61,7 @@ ubuntu@niedbalski-xxx:~$ nova list
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
 ```
 ubuntu@niedbalski-xxx:~$ juju resume --novarc=~/novarc --resume
-
+```
 Resuming machine: fd7cbbfb-2a2d-499a-88bb-1fefd2e0adfc
 Resuming machine: e6690b82-18cd-4782-a1dd-f0b4024b2894
 Resuming machine: 1977804a-bb3b-4ef8-9bc4-89d81aaffbfb
@@ -79,7 +79,7 @@ Resuming machine: 86d5d886-18fb-4150-9c52-6fed3a82e6e2
 Resuming machine: 695e36f6-0e48-48bc-9c27-ebe7ef7ff172
 Resuming machine: 5fa67990-39a2-4138-8517-0bd78d41f819
 Resuming machine: 4a2f67a9-cdee-488e-a3cc-240f9d87c971
-
+```
 ubuntu@niedbalski-xxx:~$ nova list
 ```
 +--------------------------------------+----------------------------+--------+------------+-------------+---------------------------------------------+
