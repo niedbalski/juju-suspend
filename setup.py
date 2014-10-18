@@ -27,5 +27,7 @@ setup(
     ],
     entry_points = """
 [console_scripts]
+juju-suspend = juju_suspend.cli:main
+juju-resume = juju_suspend.cli:main
 """
 )

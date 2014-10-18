@@ -8,15 +8,14 @@ class OpenstackProvider(Provider):
 
     def __init__(self, environment):
         Provider.__init__(self, environment)
-
-        if not self.environment.options.get('novarc', None):
+        if not self.environment.options.novarc:
             raise Exception("Please specify your novarc file")
 
     def filter_machines(self):
         for i, v in self.environment.machines:
             instance_id = v['InstanceId']
 
-            if instance_id in ('localhost',) and v['DNSName'] + ':17070' \
+            if instance_id in ('localhost',) and v['DNSName'] + ':17070'\
                not in self.environment.state_servers:
                 yield instance_id
 
