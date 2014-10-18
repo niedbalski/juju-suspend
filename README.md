@@ -1,8 +1,14 @@
 Juju suspend/resume
 ===================
 
+Juju pluging for suspend and resume a juju environment for avoid wasted resources.
+
+
+# How it works
+
 
 ubuntu@niedbalski-xxx:~$ juju-suspend --novarc=~/novarc --suspend
+
 ubuntu@niedbalski-xxx:~$ nova list
 ```
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
