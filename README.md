@@ -13,6 +13,7 @@ On development, still not well tested.
 
 
 ubuntu@niedbalski-xxx:~$ pip install juju-suspend
+
 ubuntu@niedbalski-xxx:~$ juju suspend --novarc=~/novarc --suspend
 ubuntu@niedbalski-xxx:~$ nova list
 ```
