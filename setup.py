@@ -6,7 +6,7 @@ __author__ = 'Jorge Niedbalski R. <jnr@metaklass.org>'
 import os
 from setuptools import setup, find_packages
 
-dependencies = [ "jujuclient" ]
+dependencies = ["jujuclient"]
 
 
 def read(fname):
@@ -18,14 +18,14 @@ setup(
     author="Jorge Niedbalski R.",
     author_email="jnr@metaklass.org",
     description="",
-    install_required=dependencies,
+    install_requires=dependencies,
     packages=find_packages(),
-    test_suite = 'nose.collector',
+    test_suite='nose.collector',
     long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
     ],
-    entry_points = """
+    entry_points="""
 [console_scripts]
 juju-suspend = juju_suspend.cli:main
 juju-resume = juju_suspend.cli:main
