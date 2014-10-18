@@ -6,7 +6,7 @@ __author__ = 'Jorge Niedbalski R. <jnr@metaklass.org>'
 import os
 from setuptools import setup, find_packages
 
-dependencies = ["jujuclient"]
+dependencies = ["jujuclient", "PyYaml"]
 
 
 def read(fname):
