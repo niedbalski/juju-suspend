@@ -14,8 +14,9 @@ def read(fname):
 
 setup(
     name="juju_suspend",
-    version="0.0.1",
+    version="0.0.1b",
     author="Jorge Niedbalski R.",
+    include_package_data=True,
     author_email="jnr@metaklass.org",
     description="",
     install_requires=dependencies,
