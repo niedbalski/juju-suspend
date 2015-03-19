@@ -1,7 +1,7 @@
 Juju suspend/resume
 ===================
 
-Juju pluging for suspend and resume a juju environment for avoid wasted resources.
+Juju plugin for suspend and resume a juju environment for avoid wasted resources.
 
 
 # Warning
