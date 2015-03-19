@@ -60,7 +60,7 @@ ubuntu@niedbalski-xxx:~$ nova list
 | e9d5b063-1ade-4760-ab2c-0b6f2058e711 | niedbalski-xxx         | ACTIVE  | -          | Running     | niedbalski_admin_net=10.5.0.3, 10.230.18.13 |
 +--------------------------------------+----------------------------+---------+------------+-------------+---------------------------------------------+
 ```
-ubuntu@niedbalski-xxx:~$ juju resume --novarc=~/novarc --resume
+ubuntu@niedbalski-xxx:~$ juju suspend --novarc=~/novarc --resume
 ```
 Resuming machine: fd7cbbfb-2a2d-499a-88bb-1fefd2e0adfc
 Resuming machine: e6690b82-18cd-4782-a1dd-f0b4024b2894

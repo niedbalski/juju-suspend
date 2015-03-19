@@ -13,8 +13,8 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name="juju_suspend",
-    version="0.0.1b",
+    name="juju-suspend",
+    version="0.1.0",
     author="Jorge Niedbalski R.",
     include_package_data=True,
     author_email="jnr@metaklass.org",
@@ -29,6 +29,5 @@ setup(
     entry_points="""
 [console_scripts]
 juju-suspend = juju_suspend.cli:main
-juju-resume = juju_suspend.cli:main
 """
 )
