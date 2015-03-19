@@ -3,8 +3,8 @@ from juju_suspend.providers.base import Provider
 
 class LocalProvider(Provider):
 
-    suspend_cmd = "lxc-stop --name {0}"
-    resume_cmd = "lxc-start -d --name {0} --quiet"
+    suspend_cmd = "lxc-freeze -n {0}"
+    resume_cmd = "lxc-unfreeze -n {0}"
     use_sudo = True
 
     def __init__(self, environment):
